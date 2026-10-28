@@ -1,10 +1,78 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Explore Mysuru city bus routes and public transport information."><title>Mysuru Bus Connect</title><link rel="stylesheet" href="style.css"></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Mysuru Bus Connect</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
-<header><a class="brand" href="#">🚌 Mysuru <span>Bus Connect</span></a><nav><a href="#search">Find a Route</a><a href="#features">Features</a><a href="#about">About</a></nav></header>
-<main>
-<section class="hero"><div><p class="eyebrow">YOUR CITY. YOUR ROUTE.</p><h1>Get around <em>Mysuru</em> with confidence.</h1><p class="lead">A simple starting point for discovering city bus routes, stops and travel information in Mysuru.</p><a class="button" href="#search">Explore routes →</a><p class="note">Student project demo · Timings and fares are not yet connected to verified data.</p></div><div class="art"><div class="sun"></div><span class="pill">MYSURU CITY</span><div class="bus"><b>CITY BUS</b><div class="windows"><i></i><i></i><i></i></div><div class="front"></div><i class="wheel one"></i><i class="wheel two"></i></div><div class="float">📍 <span><b>Find your stop</b><small>Start exploring routes</small></span></div></div></section>
-<section id="search" class="section"><div class="heading"><p class="eyebrow">PLAN YOUR JOURNEY</p><h2>Where do you want to go?</h2><p>Enter your start and destination to see a demo response.</p></div><form id="route-form"><label>From<input id="from" list="places" placeholder="e.g. City Bus Stand" required></label><span class="swap">↔</span><label>To<input id="to" list="places" placeholder="e.g. Mysore Palace" required></label><datalist id="places"><option value="City Bus Stand"><option value="Mysore Palace"><option value="Mysuru Railway Station"><option value="Kuvempunagar"><option value="Chamundi Hill"><option value="Vijayanagar"><option value="Mysuru Zoo"></datalist><button class="button">Find route</button></form><div id="result" class="result" role="status" aria-live="polite" hidden></div></section>
-<section id="features" class="section features"><div class="heading"><p class="eyebrow">MADE FOR EVERYDAY TRAVEL</p><h2>Travel information, made simpler.</h2></div><div class="grid"><article><span>🗺️</span><h3>Route discovery</h3><p>Explore possible journeys between familiar Mysuru locations.</p></article><article><span>🚏</span><h3>Bus stop guide</h3><p>Keep useful stop and location information together in one place.</p></article><article><span>🕒</span><h3>Timings & fares</h3><p>Designed to display verified schedules and fare information when reliable data is added.</p></article></div></section>
-<section id="about" class="about"><div><p class="eyebrow">ABOUT THE PROJECT</p><h2>Built around Mysuru's daily journeys.</h2></div><p>Mysore City Bus Information System (MCBI) is a student project concept focused on making public transport information easier to discover for residents, students, visitors and daily commuters. This starter version demonstrates the interface; it does not connect to official live bus data.</p></section>
-</main><footer><b>🚌 Mysuru Bus Connect</b><p>Student project · Verify bus details with official transport sources before travelling.</p></footer><script src="script.js"></script></body></html>
+
+    <header class="topbar">
+        <a class="brand" href="#">
+            🚌 Mysuru Bus Connect
+        </a>
+
+        <nav>
+            <a href="#search">Find a Route</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <p>YOUR CITY. YOUR ROUTE.</p>
+
+            <h1>
+                Get around
+                <span>Mysuru</span>
+                with confidence.
+            </h1>
+
+            <p>
+                Discover city bus routes, stops,
+                and travel information in Mysuru.
+            </p>
+
+            <a href="#search" class="button">
+                Explore routes →
+            </a>
+        </section>
+
+        <section id="search">
+            <h2>Where do you want to go?</h2>
+
+            <form id="route-form">
+                <label>
+                    From
+                    <input id="from"
+                           placeholder="Starting location"
+                           required>
+                </label>
+
+                <label>
+                    To
+                    <input id="to"
+                           placeholder="Destination"
+                           required>
+                </label>
+
+                <button type="submit">
+                    Find Route
+                </button>
+            </form>
+
+            <div id="route-result" hidden></div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
